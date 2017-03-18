@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="dist/css/app.css">
+        <title>早起点到</title>
+    </head>
+    <body scroll="no">
+        <div class="cloud-bottom"></div>
+        <div class="cloud-float-1"></div>
+        <div class="cloud-float-2"></div>
+        <div class="cloud-3"></div>
+
+        <h3>早起打卡</h3>
+        <div class="tree">
+            <img src="pngs/bg_tree.png" height="300" width="250">
+        </div>
+        <span id="main-text">早起第<span class="day">0</span>日</span>
+        <span class="exp-text">经验：<span class="exp">0</span></span>
+        <span class="explain-text" onclick="popupDiv('bumb')" id="exp">说明</span>
+        <button class="check" id="check" onclick="popupDiv('daka')">打卡</button>
+
+        <nav id="bumb">
+            <header>
+                <span>说明</span>
+            </header>
+            <table>
+                <tr class="title">
+                    <td>打卡时间</td>
+                    <td>经验</td>
+                </tr>
+                <tr>
+                    <td>6:00~6:30</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>6:30~7:30</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>7:30~8:30</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>8:30~9:30</td>
+                    <td>10</td>
+                </tr>
+            </table>
+            <p class="intro">起的越早，经验越多哦30天经验累计达到900即可获得小家园神秘礼物一份</p>
+            <img class="close" onclick="hideDiv('bumb');" src="pngs/close.png" width="34" height="34";>
+        </nav>
+        
+        <nav id="daka" class="daka">
+            <header id="head">
+            </header>
+            <img src="" height="105" width="122.7" class="monster" id="success">
+            <p id="date" class="date">{{ day }}</p>
+            <p id="mark" class="mark">经验+<span id="score">{{ exp }}</span></p>
+            <button class="check enter" onclick="hideDiv('daka')" id="enter">确定</button>
+        </nav>
+         <div class="loader">
+    <div class="loader-content">
+      <!-- <p style="color:#fff">正在加载...</p> -->
+      <img src="pngs/loading.jpg">
+      <p class="loading-tip">网页还在加载哦~</p>
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+    </div>
+  </div>
+  <script>
+  window.onload = function() {
+    // 加载的变色小点点
+    var i = 0,
+      j = 0;
+    var loadingColor = ['lightskyblue', 'white']
+
+    setInterval(function() {
+      document.getElementsByClassName('loadingProccess')[i].style.background = loadingColor[j];
+      i += 1;
+      if (i == 10) {
+        i = 0;
+        j = 1 - j;
+      }
+    }, 100);
+    // 加载淡出
+    setTimeout(function() {
+      var loader = document.getElementsByClassName("loader")[0];
+      loader.className = "loader fadeout";
+      setTimeout(function() {
+        loader.style.display = "none"
+      }, 1000)
+    }, 2700)
+  }
+  </script>
+        <script src="dist/js/Jquery.js"></script>
+        <script type="text/javascript" src="dist/js/app.js"></script>
+    </body>
+</html>

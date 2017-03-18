@@ -1,0 +1,94 @@
+/*简单版本*/
+fieldset{
+	width:250px;
+	margin: 0 auto;
+	height: 250px;
+}
+input{
+	width: 100px;
+	margin-top: 20px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 18px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+select{
+	height: 30px;
+	line-height: 30px;
+	width: 50px;
+	font-size: 18px;
+	color:#ff4387;
+}
+button{
+	width: 30px;
+	height: 30px;
+	background: none;
+	display: inline-block;
+	position: relative;
+	bottom: 1px;
+	left:90px;
+	top:10px;
+}
+#btn{
+	position: relative;
+}
+#fh{
+	display: inline-block;
+	position: absolute;
+	top:15px;
+}
+.jieguo{
+	position: relative;
+	left: 33px;
+}
+
+/*复杂版本*/
+#suanpan{
+	border-top: 1px solid #f8f8f8;
+	border-left: 1px solid #f8f8f8;
+}
+#suanpan td{
+	border-right: 1px solid #f8f8f8;
+	border-bottom: 1px solid #f8f8f8;
+	margin:0;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	font-weight: "微软雅黑";
+	cursor: pointer;
+}
+.bgcg{
+	background: #f1f1f1;
+}
+.graybgc{
+	background: #f1f1f1;
+}
+#suanpan td:hover{
+	background: #f6f6f6;
+}
+#suanpan td:active{
+	background: #C0C0C0;
+}
+.screen{
+	min-height: 20px;
+	width: 169px;
+	background: #f5f5f5;
+	text-align: right;
+	overflow: hidden;
+	margin:0;
+}
+#calcu-screen{
+	max-height: 40px;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	max-width: 160px;
+	word-break: break-all;
+	margin:0;
+}
+#complex{
+	margin: 0 auto;
+	width: 250px;
+	margin-top: 50px;
+}

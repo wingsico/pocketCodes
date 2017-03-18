@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background: url(pngs/bg.jpg);
+    }
+    
+    #box {
+        width: 735px;
+        height: 350px;
+        margin: 50px auto;
+        position: relative;
+    }
+    
+    #box ul {
+        position: absolute;
+        bottom: 10px;
+        left: 1px;
+    }
+    
+    #box ul li {
+        list-style-type: none;
+        width: 120px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.5);
+        float: left;
+        line-height: 30px;
+        text-align: center;
+        font-size: 12px;
+        margin: 0 1px;
+        cursor: pointer;
+    }
+    
+    #box ul li.curr {
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+    }
+</style>
+
+<body>
+    <div id="box">
+        <img src="pngs/1.jpg" class="pic_f">
+        <ul>
+            <!--[0]-->
+            <li class="curr">途牛旅游节</li>
+            <li>春宴专属</li>
+            <li>海岛风光</li>
+            <li>春光灿烂</li>
+            <li>宜昌交运</li>
+            <li>各国秘境</li>
+        </ul>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script>
+        //$(#box ul li) 选择到所有的li
+        var n = 0;
+        $("#box ul li").hover(function() {
+
+            n = $(this).index(); //获取到鼠标移上去的li的序号
+            $("#box img").attr("src", "pngs/" + (n + 1) + ".jpg");
+            $("this").addClass("curr").siblings().removeClass("curr");
+        }); //attr()获取标签的属性并改变
+        var timer = null;
+        $("#box").hover(function() { //鼠标移上去的时候停止自动轮播，
+            clearInterval(timer);
+        }, function() { //鼠标移开再开始自动轮播。
+            timer = setInterval(autoplay, 2000);
+        });
+        timer = setInterval(autoplay, 2000);
+
+        function autoplay() {
+            n++;
+            if (n > 5) {
+                n = 0;
+            }
+            //改变图像的路径；
+            $("#box img").attr("src", "pngs/" + (n + 1) + ".jpg");
+            //eq(n) 选择到序列号为n的li
+            $("#box ul li").eq(n).addClass("curr").siblings().removeClass("curr");
+        }
+    </script>
+</body>
+
+</html>

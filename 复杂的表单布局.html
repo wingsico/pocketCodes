@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+     <meta charset="UTF-8">
+     <title>Document</title>
+ </head>
+ <style>
+ #monthOfBirthLabel,#yearOfBirthLabel{
+ 	display: none;
+ 	
+ }
+ input#dateOfBirth{
+ 	width: 3em;
+ 	margin-right: 0.5em;
+ }
+ select#monthOfBirth{
+ 	width:10em;
+ 	margin-right: 0.5em;
+ }
+ input#yearOfBirth{
+ 	width: 5em;
+ }
+ fieldset#favoriteColor{
+ 	margin: 0;
+ 	padding: 0;
+ 	border: none;
+ 	background: transparent;
+ }
+ #favoriteColor h2{
+ 	width:10em;
+ 	float: left;
+ 	font-size: 1em;
+ 	font-weight: normal;
+ }
+ #favoriteColor .col_{
+ 	width: 4em;
+ 	float: left;
+ 	clear: none;
+ 	margin-right: 2em;
+ 	margin-top:1em;
+ }
+ #favoriteColor .col{
+ 	width: 5em;
+ 	float: left;
+ 	clear: none;
+ 	margin-top: 1em;
+ }
+ #favoriteColor label{
+ 	float: none;
+ }
+
+ </style>
+ <body>
+ 	<fieldset>
+ 		<legend>Personal Information</legend>
+      	<div>
+      		<label for="dateOfBirth">Date of Birth<label>
+      		<input name="dateOfBirth" id="dateOfBirth" type="text" />
+      		<label id="monthOfBirthLabel" for="monthOfBirth">
+      			Month of birth:</label>
+      		<select nme="monthOfBirth" id="monthOfBirth">
+      			<option value="1">January</option>
+      			<option value="2">Februray</option>
+      			<option value="3">March</option>
+      		</select>
+      		<label id="yearOfBirthLabel" for="yearOfBirth">Year of Birth:</label>
+      		<input name="yearOfBirth" id="yearOfBirth" type="text" />
+     	</div>
+     	<fieldset id="favoriteColor">
+     		<h2>Favorite Color:</h2>
+     			<div class="col_">
+     				<div>
+     					<label><input class="checkbox" id="red" name="red" type="checkbox" value="red" />red</label>
+     					<label><input class="checkbox" id="red" name="red" type="checkbox" value="red" />red</label>
+     					<label><input class="checkbox" id="red" name="red" type="checkbox" value="red" />red</label>
+     					<label><input class="checkbox" id="red" name="red" type="checkbox" value="red" />red</label>
+     					<label><input class="checkbox" id="red" name="red" type="checkbox" value="red" />red</label>
+     					<label><input class="checkbox" id="red" name="red" type="checkbox" value="red" />red</label>
+     				</div>
+     			</div>
+     			<div class="col">
+     				<div>
+     					<label><input class="checkbox" id="orange" name="orange" type="checkbox" value="orange" />orange</label>
+     					<label><input class="checkbox" id="orange" name="orange" type="checkbox" value="orange" />orange</label>
+     					<label><input class="checkbox" id="orange" name="orange" type="checkbox" value="orange" />orange</label>
+     					<label><input class="checkbox" id="orange" name="orange" type="checkbox" value="orange" />orange</label>
+     					<label><input class="checkbox" id="orange" name="orange" type="checkbox" value="orange" />orange</label>
+     					<label><input class="checkbox" id="orange" name="orange" type="checkbox" value="orange" />orange</label>
+     				</div>
+     			</div>
+        </fieldset>
+     </fieldset>
+ </body>
+ </html>

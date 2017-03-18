@@ -1,0 +1,72 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+body, html {
+	height: 100%;
+	overflow: hidden;
+}
+a {
+	text-decoration: none;
+}
+header {
+	height: 3rem;
+	line-height: 3rem;
+	background: linear-gradient(#00ffff,#0033ff);
+	/*text-align: center;*/
+}
+header p {
+	font-size: 1rem;
+	color: #fff;
+	text-align: center;
+}
+header .back {
+	position: absolute;
+	left: 5%;
+	color: #fff;
+	font-size: 1.3rem;
+	
+}
+#content {
+	text-align: center;
+	height: 100%;
+}
+.date {
+	margin: 5px 0;
+}
+.date_choose {
+	width: 6.2rem;
+	height: 1.7rem;
+	font-size: 0.9rem;
+	border: 2px solid #00AAff;
+	border-radius: 5px;
+}
+.picture {
+	height: 100%;
+	/*background: rgba(204,255,204,0.3);*/
+}
+.picture a {
+	width: 40%;
+	display: inline-block;
+	border: 2px solid #00AAff;
+	font-size: 0.7rem;
+	padding: 5px 0;
+	border-radius: 5px;
+	color: #00AAff;
+}
+.picture .active {
+	background: #00AAff;
+	color: #fff;
+}
+#cloud {
+	background: url("../pngs/cloud.png") no-repeat;
+	position: fixed;
+	width: 74px;
+	height: 34px;
+	left: -148px;
+	top: 100px;
+	z-index: -1;
+	background: contain;
+	display: block;
+}

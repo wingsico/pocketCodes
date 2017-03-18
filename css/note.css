@@ -1,0 +1,196 @@
+#main{
+	width: 800px;
+	margin: 0 auto;
+	border-left: 1px solid #808080;
+	border-right: 1px solid #808080;
+}
+
+#content{
+	width: 705px;
+	margin: 0 auto;
+}
+header{
+	text-align: center;
+}
+.text{
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	background: linear-gradient(90deg,#f44,#ccff77)
+}
+textarea#liuyan{
+	display: block;
+	width: 700px;
+	height:auto;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	min-height: 100px;
+}
+.button{
+	display: inline-block;
+	position: relative;
+	left:537px;
+	margin-top: 5px;
+	width: 80px;
+	height: 30px;
+}
+.show{
+	display: block;
+}
+.hidden{
+	display: none;
+}
+.box{
+	margin-top: 20px;
+	display: block;
+	width: 705px;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	border-top:1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	position: relative;
+	min-height: 100px;
+	margin-top: 40px;
+}
+.img{
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	position: relative;
+	top:38%;
+	margin-right: 30px;
+}
+.remove{
+	display: inline-block;
+	position: absolute;
+	top:-25px;
+	left:650px;
+	cursor: pointer;
+
+}
+.floor{
+	position: absolute;
+	top:0px;
+	left:-40px;
+	color:blue;
+}
+.comment{
+	display: inline-block;
+	position: absolute;
+	top:-25px;
+	left:600px;
+	cursor: pointer;
+}
+.textarea{
+	position: absolute;
+	width: 300px;
+	height:50px;
+	top:48px;
+	left: 200px;
+	font-size: 14px;
+}
+.subcom{
+	position: absolute;
+	top:48px;
+	left:500px;
+	height: 50px;
+}
+.carea{
+	border-radius: 2px;
+	background: tan;
+	box-shadow: 0 0 0 2px #655;
+	outline: 2px solid #655;
+}
+
+.acom{
+	display: inline-block;
+}
+.comarea{
+	width: 600px;
+	border: 2px solid #428bca;
+	margin-left: 100px;
+}
+.rem{
+	cursor: pointer;
+	display: block;
+	width: 100px;
+}
+.b{
+	display: block;
+	margin-bottom: 40px;
+}
+/*#discuss{
+	width: 400px;
+	height: 500px;
+	border: 1px solid #808080;
+	box-shadow: 0 0 0 999px rgba(0,0,0,.6);
+	position: fixed;
+	top: 50%;
+	margin:0 auto;
+}*/
+#zezhao{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background:rgba(0,0,0,.6);
+	display: none;
+}
+#discuss{
+	margin: 0 auto;
+	margin-top: 5rem;
+	z-index: 1;
+	width: 400px;
+	height: 500px;
+	border: 1px solid #808080;
+	background: #fff;
+	box-shadow: 0px 3px 3px,0 -3px 3px;
+	border-radius: 10px;
+}
+input[name="nichen"]{
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	margin-top: 30px;
+}
+.nichen{
+	font-weight: bold;
+	font-size: 18px;
+}
+#discuss div{
+	width: 300px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+#discuss textarea{
+	width: 282px;
+	min-height: 300px;
+	font-size: 18px;
+}
+#discuss .anniu{
+	margin: 0;
+	margin: 0 auto;
+	text-align: center;
+
+}
+.box .glyphicon{
+	display: inline-block;
+	position: absolute;
+	left: 460px;
+	top:-25px;
+	cursor: pointer; 
+	color:red;
+}
+.box span.glyphicon:hover,span.glyphicon:focus{
+	color:orange;
+}
+.number{
+	display: inline-block;
+	position: absolute;
+	left: 560px;
+	top:-23px;
+}
+.btn{
+	font-size: 16px;
+}

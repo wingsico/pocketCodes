@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>计算器</title>
+  <link rel="stylesheet" href="dist/css/cal.css" type="text/css">
+</head>
+
+<body>
+  <!-- 简单版本 -->
+  <fieldset>
+    <legend>Calculate By nanxI</legend>
+    <div>
+      第一个数：
+      <input type="text" name="num" value="" />
+    </div>
+    第二个数：
+    <input type="text" name="num" value="" />
+    <div id="btn">
+      <span id="fh">算式符号：</span>
+      <button id="jia">+</button>
+      <button id="jian">-</button>
+      <button id="cheng">×</button>
+      <button id="chu">÷</button>
+    </div>
+    结果：
+    <input type="text" name="num" value="" class="jieguo" />
+  </fieldset>
+  <!-- 复杂版本 -->
+  <div id="complex">
+    <div id="calcu-screen">
+      <input type="text" name="numScreen" class="screen" value="0" onfocus="this.blur();" />
+    </div>
+    <table id="suanpan" cellspacing="0">
+      <tr class="graybgc">
+        <td style="color:#FF4500" onclick="clearscreen()">AC</td>
+        <td style="color:#FF4500" onclick="del();">←</td>
+        <td onclick="persent()">%</td>
+        <td class="bgcg" onclick="divide()">÷</td>
+      </tr>
+      <tr>
+        <td onclick="jisuan(7);">7</td>
+        <td onclick="jisuan(8);">8</td>
+        <td onclick="jisuan(9);">9</td>
+        <td class="bgcg" onclick="times()">×</td>
+      </tr>
+      <tr>
+        <td onclick="jisuan(4);">4</td>
+        <td onclick="jisuan(5);">5</td>
+        <td onclick="jisuan(6);">6</td>
+        <td class="bgcg" onclick="minus()">-</td>
+      </tr>
+      <tr>
+        <td onclick="jisuan(1);">1</td>
+        <td onclick="jisuan(2);">2</td>
+        <td onclick="jisuan(3);">3</td>
+        <td class="bgcg" onclick="plus()">+</td>
+      </tr>
+      <tr>
+        <td onclick="jisuan(0);">0</td>
+        <td onclick="dzero()">00</td>
+        <td onclick="dot()">.</td>
+        <td class="bgcg" onclick="equal()">=</td>
+      </tr>
+    </table>
+    <div class="loader">
+      <div class="loader-content">
+        <!-- <p style="color:#fff">正在加载...</p> -->
+        <img src="pngs/loading.jpg">
+        <p class="loading-tip">网页还在加载哦~</p>
+        <input class="loadingProccess" readonly="true">
+        <input class="loadingProccess" readonly="true">
+        <input class="loadingProccess" readonly="true">
+        <input class="loadingProccess" readonly="true">
+        <input class="loadingProccess" readonly="true">
+        <input class="loadingProccess" readonly="true">
+        <input class="loadingProccess" readonly="true">
+        <input class="loadingProccess" readonly="true">
+        <input class="loadingProccess" readonly="true">
+        <input class="loadingProccess" readonly="true">
+      </div>
+    </div>
+    <script>
+    window.onload = function() {
+      // 加载的变色小点点
+      var i = 0,
+        j = 0;
+      var loadingColor = ['lightskyblue', 'white']
+
+      setInterval(function() {
+        document.getElementsByClassName('loadingProccess')[i].style.background = loadingColor[j];
+        i += 1;
+        if (i == 10) {
+          i = 0;
+          j = 1 - j;
+        }
+      }, 100);
+      // 加载淡出
+      setTimeout(function() {
+        var loader = document.getElementsByClassName("loader")[0];
+        loader.className = "loader fadeout";
+        setTimeout(function() {
+          loader.style.display = "none"
+        }, 1000)
+      }, 2700)
+    }
+    </script>
+  </div>
+  <script type="text/javascript" src="dist/js/cal.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<style type="text/css">
+		
+		body {
+			background: rgba(0,0,0,.3);
+		}
+		div {
+			border: 2px solid #447302;
+			width: 300px;
+			height: 220px;
+			margin: 0 auto;
+			position: relative;
+			background: #fff;
+		}
+		div header h2 {
+			text-align: center;
+			color: #ccc;
+		}
+		input {
+			width: 150px;
+		}
+		input[type="password"] {
+			margin-left: 16px;
+		}
+		nav {
+			width: 250px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		button {
+			margin-top: 20px;
+			margin-left: 30px;
+		}
+		a {
+			font-weight: bold;
+			font-size: 20px;
+			color:#ccc;
+			text-decoration: none;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<header>
+			<h2>欢迎登录</h2>
+		</header>
+		<nav>
+			用户名：<input type="text" name="username" placeholder="QQ/邮箱/账号"></br>
+			密码：<input type="password" name="userpassword"></br>
+			<button class="login">登录</button>
+			<button class="register">注册</button>
+		</nav>
+		<a href="/##" onclick="window.close();">close</a>
+	</div>
+	<script>
+		var name = document.getElementsByName('input');
+		var date = new Date();
+		var day = 10;
+		date.setTime(date.getTime()+day*3600*24*1000)
+		var re = null,i;
+		for(i = 0;i<10;i++){
+			re = /cat/g;
+			re.test("catesdcsde");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+p{
+	position: fixed;
+	left: -105px;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border:1px solid #808080;
+	text-align: center;
+	box-shadow: 1px 1px 1px 0px,-1px -1px 1px 0px;
+}
+#fade{
+	height: 30px;
+	width: 80px;
+	background: #ffaa11;
+	line-height: 30px;
+	font-size: 16px;
+}

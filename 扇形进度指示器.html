@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>扇形进度指示器</title>
+  <style>
+  @keyframes spin {
+    to {
+      transform: rotate(.5turn);
+    }
+  }
+  
+  @keyframes bg {
+    50% {
+      background: #de4411;
+    }
+  }
+  
+  .pie {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ccc;
+    background-image: linear-gradient(to right, transparent 50%, #de4411 0);
+  }
+  
+  .pie::before {
+    content: '';
+    display: block;
+    margin-left: 50%;
+    height: 100%;
+    border-radius: 0 100% 100% 0 /50%;
+    background-color: inherit;
+    transform-origin: left;
+    animation: spin 3s linear infinite, bg 6s step-end infinite;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="pie"></div>
+</body>
+
+</html>

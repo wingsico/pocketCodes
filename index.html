@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>个人主页</title>
+  <link rel="stylesheet" type="text/css" href="dist/css/index.css">
+</head>
+
+<body>
+  <section id="menu">
+    <h1>nanxI</h1>
+    <ul>
+      <li><a href="blog.html" class="tag">Back to my blog</a></li>
+      <li><a href="#" class="tag">Portfolio</a></li>
+      <li><a href="#" class="tag">About</a></li>
+      <li><a href="#" class="tag">Services</a></li>
+      <li><a href="#" class="tag">Contact</a></li>
+    </ul>
+    <div id="note">
+      <h3 class="title">写给未来自己的一封信</h1>
+      <p>
+        内容还没想好
+      </p>
+
+    </div>
+  </section>
+  <!-- green areas -->
+  
+    
+  
+  <div class="loader">
+    <div class="loader-content">
+      <!-- <p style="color:#fff">正在加载...</p> -->
+      <img src="pngs/loading.jpg">
+      <p class="loading-tip">网页还在加载哦~</p>
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+    </div>
+  </div>
+  <script>
+  window.onload = function() {
+    // 加载的变色小点点
+    var i = 0,
+      j = 0;
+    var loadingColor = ['lightskyblue', 'white']
+
+    setInterval(function() {
+      document.getElementsByClassName('loadingProccess')[i].style.background = loadingColor[j];
+      i += 1;
+      if (i == 10) {
+        i = 0;
+        j = 1 - j;
+      }
+    }, 100);
+    // 加载淡出
+    setTimeout(function() {
+      var loader = document.getElementsByClassName("loader")[0];
+      loader.className = "loader fadeout";
+      setTimeout(function() {
+        loader.style.display = "none"
+      }, 1000)
+    }, 2700)
+  }
+  </script>
+</body>
+
+</html>

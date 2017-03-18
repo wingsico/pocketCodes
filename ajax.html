@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-1.11.1.min.js"></script>
+<script>
+var shijian;
+$(document).ready(function(){
+	
+  $("button").click(function(){
+    $.get("check.txt",function(data,status){
+      	shijian = data;
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button>向页面发送 HTTP GET 请求，然后获得返回的结果</button>
+
+</body>
+</html>

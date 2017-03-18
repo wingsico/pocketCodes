@@ -1,0 +1,14 @@
+#two {
+	background-image: url('../../pngs/qq1.jpg');
+}
+#one {
+	background-image: url('../../pngs/qq2.jpg');
+}
+.picture {
+	position: absolute;
+	top: 0;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}

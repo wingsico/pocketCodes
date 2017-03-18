@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>自适应</title>
+  <style>
+  figure {
+    border: 1px solid gray;
+    width: min-content;
+    /*CSS3新特性，宽度为其最小内容的宽度*/
+    margin: auto;
+    padding: 5px;
+  }
+  </style>
+</head>
+
+<body>
+  <!-- 目的，把文字弄得与图片一样宽并且随着图片大小的改变而改变 
+即 希望他的宽度由内部因素来决定，而不是由外部因素来决定
+-->
+  <p>There is a cute cat and all of us love it</p>
+  <figure>
+    <img src="pngs/cat.jpg">
+    <figcaption>
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    </figcaption>
+  </figure>
+  <p>We all need it with us to be greeted everyone</p>
+</body>
+
+</html>

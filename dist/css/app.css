@@ -1,0 +1,443 @@
+body
+{
+    height: 100%;
+    padding-bottom: 80px;
+
+    background-color: rgb(221, 249, 234);
+}
+
+html
+{
+    overflow: hidden;
+
+    height: 100%;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face
+{
+    font-family: fzzy;
+
+    src: url('../fonts/fangzhengzongyi.ttf');
+}
+
+@font-face
+{
+    font-family: siyuan;
+
+    src: url('../fonts/siyuan_normal.otf');
+}
+
+.cloud-bottom
+{
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    min-width: 100%;
+    height: 15%;
+
+    background: url('../../pngs/bg_bottom.png') repeat-x;
+    background-position: center bottom;
+    background-size: contain;
+}
+
+.cloud-float-1
+{
+    position: fixed;
+    z-index: -1;
+    top: 70%;
+    left: -148px;
+
+    width: 74px;
+    height: 34px;
+
+    background: url('../../pngs/cloud1.png') no-repeat;
+    background-size: contain;
+}
+
+.cloud-float-2
+{
+    position: fixed;
+    z-index: -1;
+    top: 20%;
+    right: -121px;
+
+    width: 60px;
+    height: 26px;
+
+    background: url('../../pngs/cloud2.png') no-repeat;
+    background-size: contain;
+}
+
+.tree
+{
+    position: relative;
+
+    text-align: center;
+}
+
+.tree img
+{
+    position: relative;
+    top: 20%;
+    right: 10px;
+    /*background: url("./bg_tree.png") no-repeat;
+    background-size: contain;
+    margin:auto;
+    */
+
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+h3
+{
+    font-family: fzzy;
+    font-size: 2.4rem;
+    font-weight: normal;
+
+    margin-bottom: 0;
+    padding-top: 2rem;
+
+    text-align: center;
+
+    color: rgb(42, 152, 81);
+}
+
+.day
+{
+    color: rgb(242, 217, 150);
+}
+
+#main-text
+{
+    font-family: fzzy;
+    font-size: 2.2rem;
+
+    display: block;
+
+    margin: 1.5rem 0 0;
+
+    text-align: center;
+
+    color: rgb(45, 170, 104);
+}
+
+.exp-text
+{
+    font-family: fzzy;
+    font-size: 1.5rem;
+
+    display: block;
+
+    margin: 2%;
+    margin-bottom: .5rem;
+
+    text-align: center;
+
+    color: rgb(45, 170, 104);
+}
+
+.exp
+{
+    color: rgb(242, 217, 150);
+}
+
+.explain-text
+{
+    font-family: siyuan;
+    font-size: 1.5rem;
+
+    display: block;
+
+    margin-top: 1.0rem;
+    margin-bottom: .3rem;
+
+    text-align: center;
+
+    color: rgb(83, 206, 142);
+}
+
+.cloud-3
+{
+    position: fixed;
+    top: 60%;
+    left: 0;
+
+    width: 55px;
+    height: 34px;
+
+    background: url('../../pngs/cloud3.png') no-repeat;
+    background-position: left center;
+    background-size: contain;
+}
+
+.check
+{
+    font-family: siyuan;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+
+    display: block;
+
+    width: 12rem;
+    height: 3rem;
+    margin: 0 auto;
+
+    text-align: center;
+
+    color: #fff;
+    border: rgb(83, 206, 142) solid 6px;
+    border-top: rgb(83, 206, 142) solid 4px;
+    border-bottom: rgb(83, 206, 142) solid 4px;
+    border-radius: 50px 50px;
+    background-color: rgb(20, 228, 150);
+}
+
+#bumb
+{
+    position: fixed;
+    z-index: 9999;
+    top: 10%;
+    right: 0;
+    left: 0;
+
+    display: none;
+
+    width: 300px;
+    max-width: 406px;
+    min-height: 60%;
+    margin: 0 auto;
+
+    border-radius: .4rem;
+    background-color: #fff;
+    box-shadow: 0 1px 15px 0 gray;
+}
+
+#bumb header
+{
+    font-family: siyuan;
+    font-size: 1.5rem;
+
+    padding: .5rem 0;
+
+    text-align: center;
+
+    color: #fff;
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
+    background-color: #61e6a0;
+}
+
+#bumb table
+{
+    width: 80%;
+    margin: 8% auto;
+
+    text-align: center;
+}
+
+#bumb table td
+{
+    font-family: siyuan;
+    font-size: 120%;
+    line-height: 30px;
+
+    height: 30px;
+
+    color: #61e6a0;
+}
+
+#bumb table .title td
+{
+    font-family: siyuan;
+    font-size: 1.31rem;
+    font-weight: normal;
+
+    width: 200px;
+    padding-bottom: 7%;
+
+    color: #3bca7e;
+}
+
+#bumb p.intro
+{
+    font-family: siyuan;
+    font-size: 1.1rem;
+
+    width: 178px;
+    margin: 0 auto;
+    margin-top: 9.9%;
+    margin-bottom: 2rem;
+
+    word-break: break-all;
+
+    color: #3bca7e;
+}
+
+#bumb .close
+{
+    position: absolute;
+    right: 50%;
+    bottom: 5%;
+    left: 46%;
+
+    display: block;
+
+    margin: 0 auto;
+}
+
+#mask
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(0,0,0,.5);
+}
+#daka
+{
+    position: fixed;
+    z-index: 9999;
+    top: 10%;
+    right: 0;
+    left: 0;
+
+    display: none;
+
+    width: 300px;
+    max-width: 406px;
+    min-height: 60%;
+    margin: 0 auto;
+
+    border-radius: .4rem;
+    background-color: #fff;
+    box-shadow: 0 1px 15px 0 gray;
+}
+
+#daka header
+{
+    font-family: siyuan;
+
+    height: 3.1rem;
+    margin-bottom: 2rem;
+
+    text-align: center;
+
+    color: #fff;
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
+    background-color: rgb(255, 197, 72);
+}
+
+#daka .monster
+{
+    position: relative;
+    top: 4%;
+    left: 0;
+
+    display: block;
+
+    margin: 0 auto;
+}
+
+#date
+{
+    font-family: fzzy;
+    font-size: 24px;
+
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+
+    text-align: center;
+
+    color: rgb(255, 197, 72);
+}
+
+#mark
+{
+    font-family: fzzy;
+    font-size: 30px;
+
+    position: relative;
+    left: 0;
+
+    text-align: center;
+
+    color: rgb(255, 197, 72);
+}
+
+#daka .enter
+{
+    width: 7.9rem;
+    height: 2.6rem;
+    margin-top: 3rem;
+
+    border: rgb(221, 164, 42) solid 6px;
+    border-top: rgb(221, 164, 42) solid 2px;
+    border-bottom: rgb(221, 164, 42) solid 2px;
+    border-radius: 50px 50px;
+    background-color: rgb(255, 197, 72);
+}
+
+.loader
+{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 100%;
+
+    transition: opacity 3s ease;
+    text-align: center;
+
+    background: #fff;
+}
+
+.loader-content
+{
+    position: relative;
+    top: 30%;
+
+    display: block;
+
+    margin: 0 auto;
+
+    background-size: 123px 38px;
+}
+.loader-content input
+{
+    margin: 0;
+}
+
+.fadeout
+{
+    opacity: 0;
+
+    filter: alpha(opacity=0);
+}
+
+.loader .loading-tip
+{
+    font-family: miaowu;
+}
+.loader .loadingProccess
+{
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+}

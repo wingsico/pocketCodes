@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>留言板</title>
+  <link rel="stylesheet" href="dist/css/note.css" />
+</head>
+
+<body>
+  <nav id="main">
+    <div id="content">
+      <header>
+        <h3 class="text">留言板</h3>
+      </header>
+      <textarea id="liuyan"></textarea>
+      <button class="button" id="reset">重置</button>
+      <button class="button">提交</button>
+      <div id="box">
+      </div>
+    </div>
+    <div id="zezhao">
+      <nav id="discuss">
+        <div>
+          <span class="nichen">昵称：</span>
+          <input type="text" name="nichen" id="nichen">
+        </div>
+        <div>
+          <span class="nichen">评论：</span>
+          <textarea id="qtxt"></textarea>
+        </div>
+        <div class="anniu">
+          <button class="btn">确定</button>
+          <button class="btn">取消</button>
+        </div>
+      </nav>
+    </div>
+  </nav>
+  <div class="loader">
+    <div class="loader-content">
+      <!-- <p style="color:#fff">正在加载...</p> -->
+      <img src="pngs/loading.jpg">
+      <p class="loading-tip">网页还在加载哦~</p>
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+      <input class="loadingProccess" readonly="true">
+    </div>
+  </div>
+  <script src="dist/js/note.js"></script>
+</body>
+
+</html>

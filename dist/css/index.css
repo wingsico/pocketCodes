@@ -1,0 +1,119 @@
+@font-face {
+  font-family: fzzy;
+  src: url("../fonts/fangzhengzongyi.ttf");
+}
+
+@font-face {
+  font-family: miaowu;
+  src: url("../fonts/miaowu.ttf");
+}
+body {
+   background: url(../../pngs/blog9.jpg);
+  background-size: cover;
+}
+* {
+  margin: 0;
+}
+#menu {
+  padding: 80px;
+}
+
+#menu h1 {
+  font-size: 60px;
+  font-weight: 8000;
+  font-family: fzzy;
+  margin: 0;
+  width: 170px;
+}
+
+#menu ul {
+  list-style: none;
+  padding: 0;
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+#menu ul li {
+  width: 180px;
+}
+
+#menu ul li .tag {
+  display: block;
+  background: #fff;
+  box-shadow: 2px 2px 1px 0px #808080;
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  margin-bottom: 10px;
+  transition: width 0.5s;
+  font-family: miaowu;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#menu ul li a:hover {
+  width: 240px;
+}
+
+#footer {
+  padding: 80px;
+  font-family: miaowu;
+}
+.loader {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: #fff;
+  text-align: center;
+  transition: opacity 3s ease;
+}
+
+.loader-content {
+  background-size: 123px 38px;
+  display: block;
+  position: relative;
+  top: 30%;
+  margin: 0 auto;
+}
+
+.fadeout {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.loader .loading-tip {
+  font-family: miaowu;
+}
+.loader .loadingProccess {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+#note {
+  display: inline-block;
+  margin-left: 50px;
+  width: 700px;
+  height: 800px;
+  background: white;
+  box-shadow: 1px 1px 1px #808080,-1px -1px 1px #808080;
+  padding: 20px;
+}
+
+#note .title {
+  text-align: center;
+  font-family: miaowu;
+}
+#note p {
+  font-family: miaowu;
+  margin-top: 20px;
+}
