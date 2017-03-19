@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>arraySimilar</title>
+</head>
+
+<body>
+    <script>
+        // param1 Array
+        // param2 Array
+        // return true or false
+        function arraysSimilar(arr1, arr2) {
+            if (arr1 instanceof Array && arr2 instanceof Array) {
+                var key1 = [],
+                    key2 = [],
+                    len1 = arr1.length,
+                    len2 = arr2.length;
+                if (len1 != len2) {
+                    return false;
+                };
+                if (len1) {
+                    for (var i = 0; i < len1; i++) {
+                        var item1 = arr1[i],
+                            firstType = typeOf(item1);
+                        if (key1.join().indexOf(firstType) < 0) {
+                            key1.push(firstType);
+                        }
+
+                        var item2 = arr2[i],
+                            secondType = typeOf(item2);
+                        if (key2.join().indexOf(secondType) < 0) {
+                            key2.push(secondType);
+                        }
+                    }
+                    key1 = key1.sort();
+                    key2 = key2.sort();
+                    console.log(key1 + ' ' + key2);
+                    if (key1.join() === key2.join()) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return true;
+                }
+            } else {
+                return false;
+            }
+        }
+
+        function typeOf(item) {
+            var type = typeof item;
+            if (type != "object") {
+
+            } else if (item === null) {
+                type = 'null';
+            } else if (item === window) {
+                type = 'window';
+            } else {
+                if (item instanceof Date) {
+                    type = 'date';
+                } else if (item instanceof Array) {
+                    type = 'array';
+                } else {
+                    type = 'object';
+                }
+            }
+            return type;
+        }
+    </script>
+    <script src="js/aSdata.js"></script>
+</body>
+
+</html>
