@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>array to object</title>
+</head>
+
+<body>
+    <script>
+        var message = "张三:100;李四:90;王五:80"
+
+
+        var arr = message.split(";");
+        var str = JSON.stringify(arr);
+        var obj = JSON.parse(str);
+        console.log(obj);
+        var key;
+        for (key in obj) {
+            document.write(key + '</br>')
+        }
+    </script>
+</body>
+
+</html>
