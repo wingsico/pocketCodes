@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>滑滑滑</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    #sider {
+        width: 300px;
+        height: 100%;
+        background: red;
+        display: inline-block;
+        transform: translateX(-300px);
+        transition: transform 1s;
+        vertical-align: top;
+    }
+    
+    #main {
+        border: 1px solid black;
+        width: 200px;
+        height: 100%;
+        display: inline-block;
+        transition: transform 1s;
+        transform: translateX(-300px);
+    }
+</style>
+
+<body>
+    <div id="sider">
+        <ul>
+            <li>123</li>
+            <li>456</li>
+            <li>123</li>
+            <li>456</li>
+        </ul>
+    </div>
+    <div id="main">
+
+    </div>
+    <button id="slider">滑出</button>
+    <button id="back">back</button>
+</body>
+<script>
+    document.getElementById('slider').onclick = function() {
+        document.getElementById('sider').style.transform = "translateX(0px)"
+        document.getElementById('main').style.transform = 'translateX(0px)'
+    }
+
+    document.getElementById('main').onclick = function() {
+        document.getElementById('sider').style.transform = "translateX(-300px)"
+        document.getElementById('main').style.transform = 'translateX(-300px)'
+    }
+</script>
+
+</html>

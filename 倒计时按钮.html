@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时</title>
+</head>
+<style>
+    #send {
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        font-size: 16px;
+    }
+</style>
+
+<body>
+    <input type="text" id="time" placeholder="输入验证码">
+    <input type="button" id="send" value="发送验证码">
+</body>
+<script>
+    function $(name) {
+        return document.querySelector(name)
+    }
+
+    function sendSth() {
+        var num = 59;
+        $('#send').disabled = true;
+        $('#send').value = num;
+        var i = setInterval(function() {
+            num--;
+            $('#send').value = num;
+            if (num === 0) {
+                clearInterval(i);
+                $('#send').disabled = false;
+                $('#send').value = '重新发送'
+            }
+        }, 1000)
+    }
+    $('#send').onclick = function() {
+        sendSth();
+    }
+</script>
+
+</html>
