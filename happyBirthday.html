@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+
+    @keyframes myfirst {
+      0% {
+        font-size: 20px;
+        color: red;
+        left: 0px;
+        top: 0px;
+        transform: rotateX(45deg);
+      }
+      25% {
+        font-size: 50px;
+        color: yellow;
+        left: 200px;
+        top: 0px;
+        transform: rotateX(90deg);
+        transform: rotateY(90deg);
+      }
+      50% {
+        font-size: 100px;
+        color: blue;
+        left: 200px;
+        top: 200px;
+        transform: rotateX(180deg);
+        transform: rotateY(180deg);
+      }
+      75% {
+        font-size: 150px;
+        color: green;
+        left: 0px;
+        top: 200px;
+        transform: rotateX(270deg);
+        transform: rotateY(270deg);
+      }
+      100% {
+        font-size: 200px;
+        color: red;
+        left: 0px;
+        top: 0px;
+        transform: rotateX(360deg);
+        transform: rotateY(360deg);
+      }
+    }
+
+    @-webkit-keyframes myfirst /* Safari and Chrome */
+    {
+      0% {
+        font-size: 20px;
+        color: red;
+        left: 0px;
+        top: 0px;
+        transform: rotateX(45deg);
+      }
+      25% {
+        font-size: 50px;
+        color: yellow;
+        left: 200px;
+        top: 0px;
+        transform: rotateX(90deg);
+        transform: rotateY(90deg);
+      }
+      50% {
+        font-size: 100px;
+        color: blue;
+        left: 200px;
+        top: 200px;
+        transform: rotateX(180deg);
+        transform: rotateY(180deg);
+      }
+      75% {
+        font-size: 150px;
+        color: green;
+        left: 0px;
+        top: 200px;
+        transform: rotateX(270deg);
+        transform: rotateY(270deg);
+      }
+      100% {
+        font-size: 200px;
+        color: red;
+        left: 0px;
+        top: 0px;
+        transform: rotateX(360deg);
+        transform: rotateY(360  deg);
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      text-align: center;
+      position: relative;
+      top:250px;
+    }
+
+    span {
+      margin: 50px;
+    }
+
+    .first {
+      display: inline-block;
+      font-size: 200px;
+      position: relative;
+      animation: myfirst 3s;
+      -webkit-animation: myfirst 3s; /* Safari and Chrome */
+      color: #00BBFF;
+    }
+
+    .second {
+      display: inline-block;
+      font-size: 200px;
+      position: relative;
+      animation: myfirst 3s;
+      -webkit-animation: myfirst 3s; /* Safari and Chrome */
+      color: #cf4a30;
+    }
+
+    .third {
+      display: inline-block;
+      font-size: 200px;
+      position: relative;
+      animation: myfirst 3s;
+      -webkit-animation: myfirst 3s; /* Safari and Chrome */
+      color: #FF69B4;
+    }
+
+    .fourth {
+      display: inline-block;
+      font-size: 200px;
+      position: relative;
+      animation: myfirst 3s;
+      -webkit-animation: myfirst 3s; /* Safari and Chrome */
+      color: #4cae4c;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <span class="first">生</span>
+  <span class="second">日</span>
+  <span class="third">快</span>
+  <span class="fourth">乐!</span>
+</div>
+</body>
+</html>

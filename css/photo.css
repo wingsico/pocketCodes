@@ -1,6 +1,7 @@
 #replace {
   width:600px;
   height:400px;
+  border: 10px solid #fff;
 }
 
 body {
@@ -20,6 +21,8 @@ a {
   background-color: transparent;
   font-weight: bold;
   text-decoration: none;
+  padding: 0;
+  display: inline-block;
 }
 
 ul {
@@ -27,18 +30,24 @@ ul {
 }
 
 li {
-  float: left;
-  padding: 1em;
+  display: inline-block;
   list-style-type:none;
+  margin: 10px;
 }
-
-img {
-  display: block;
-  clear: both;
+a {
+  width:120px;
+  height:100px;
 }
 
 #describe {
   margin-top:20px;
   font-family: "Ubuntu Mono";
   font-size: 20px;
+  display: block;
+}
+
+#gallery img {
+  width:120px;
+  height:100px;
+  border: 0;
 }

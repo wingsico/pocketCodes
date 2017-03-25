@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>平稳退化/js的分离</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <a href="http://www.baidu.com" class="popUp">baidu</a>
+<!--原生href也指向同一个网站，当js不可用的时候，就可以平稳退化了-->
+</body>
+<script>
+//  if(!method1 || !method2){
+//    return false
+//  } 对象检测
+window.onload = function () {
+  if(!document.getElementsByTagName || !document.getElementById){
+    return false // 向后兼容
+  }
+  var links = document.getElementsByTagName('a')
+  for(var i=0;i<links.length;i++){
+    if(links[i].getAttribute('class')==='popUp'){
+      links[i].onclick = function () { // 不在html文档内绑定onclick事件，js分离
+        popUp(this.getAttribute('href'))
+        return false
+      }
+    }
+  }
+}
+
+  function popUp(url) {
+    window.open(url,'popUp','width=320,height=480,top=200,left=200')
+  }
+</script>
+</html>
