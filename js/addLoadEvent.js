@@ -6,8 +6,10 @@ function addLoadEvent(func) {
   if(typeof window.onload != 'function'){
     window.onload = func
   } else {
-    oldonload()
-    func()
+    window.onload = function(){
+      oldonload()
+      func()
+    }
   }
 }
 // addLoadEvent(example) // 调用方法
