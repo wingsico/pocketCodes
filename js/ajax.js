@@ -16,7 +16,7 @@ var ajax = function(method, url, cb, data, dataType) {
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4) {
         if (xhr.status === 500 || xhr.status === 404) {
-          alert("失败!") // 跳转至错误页面。可以自己定义
+          console.log('请求错误:'+ xhr.status) // 跳转至错误页面。可以自己定义
         }
         if (xhr.status === 200) {
           cb(xhr.responseText);
